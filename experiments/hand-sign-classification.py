@@ -8,7 +8,7 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 
-from google.colab import files
+#from google.colab import files
 from sklearn.model_selection import train_test_split
 from keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -134,7 +134,7 @@ model = Sequential([
 # Compile the Model
 model.compile(
     metrics=['accuracy'],
-    loss=tf.keras.losses.KLDivergence(),
+    loss='categorical_crossentropy',
     optimizer=tf.optimizers.Nadam()
 )
 
